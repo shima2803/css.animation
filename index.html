@@ -1,11 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
-</body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #71ee0a;
+            animation: fundo  3s infinite alternate ease-in-out;;
+        }
+        @keyframes fundo{
+            0%{
+                background-color: #2ecc71;
+            }
+            10%{
+                background-color: aqua;
+            }
+            30%{
+                background-color: cornsilk;
+            }
+            60%{
+                background-color: lightpink;
+            }
+            80%{
+                background-color: olive;
+            }
+            100%{
+                background-color: lightgreen;
+            }
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            position: relative;
+            animation: moveAndColor 3s infinite alternate ease-in-out;
+            clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+        }
+
+        @keyframes moveAndColor {
+            0% {
+                left: 0;
+                background-color: #3498db;
+                clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+            }
+
+            50% {
+                left: 50%;
+                background-color: #e74c3c;
+                clip-path: none;
+            }
+
+            100% {
+                left: 0%;
+                background-color: #2ecc71;
+                clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+            }
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            animation: changeColor 1s infinite alternate;
+        }
+
+        @keyframes changeColor {
+            0% {
+                color: blueviolet;
+            }
+
+            50% {
+                color: red;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+
+        .hot {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            animation: circulo 5s linear infinite;
+        }
+
+        @keyframes circulo {
+            0% {
+                left: 0;
+                top: 50%;
+                background-color: aquamarine;
+            }
+
+            25% {
+                left: 50%;
+                top: 0;
+                background-color: coral;
+            }
+
+            50% {
+                left: 100%;
+                top: 50%;
+                background-color: fuchsia;
+            }
+
+            75% {
+                left: 50%;
+                top: 100%;
+                background-color: indianred;
+            }
+
+            100% {
+                left: 0;
+                top: 50%;
+                background-color: tomato;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+        .cir {
+            width: 100px;
+            height: 100px;
+            background-color: #f39c12;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            position: relative;
+            animation: rotateStar 3s infinite linear;
+        }
+
+        @keyframes rotateStar {
+            0% {
+                left: 0;
+                top: 50%;
+                background-color: aquamarine;
+            }
+
+            25% {
+                left: 50%;
+                top: 0;
+                background-color: coral;
+            }
+
+            50% {
+                left: 100%;
+                top: 50%;
+                background-color: fuchsia;
+            }
+
+            75% {
+                left: 50%;
+                top: 100%;
+                background-color: indianred;
+            }
+
+            100% {
+                left: 0;
+                top: 50%;
+                background-color: tomato;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h1>ola</h1>
+        </div>
+        <p>
+            voce consegue acompanhar a estrela?
+        </p>
+        <div class="hot"></div>
+        <div class="cir"></div>
+    </body>
+
 </html>
